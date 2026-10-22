@@ -1,0 +1,16 @@
+git add .
+......name: Datacom Cloud Workflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run Datacom Simulation Script
+        run: echo "Datacom GitHub Actions Workflow completed successfully!"
